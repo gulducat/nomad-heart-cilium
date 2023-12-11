@@ -1,0 +1,14 @@
+{
+	"cniVersion": "1.0.0",
+	"name": "nomad-heart-cilium",
+	"plugins": [
+		{
+			"type": "cilium-cni",
+			"log-file": "/tmp/cilium-cni.log",
+			"enable-debug": true
+		},
+		{
+			"type": "nomad-heart-cilium"
+		}
+	]
+}
