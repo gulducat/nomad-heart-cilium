@@ -4,6 +4,12 @@ job "web" {
 
     network {
       mode = "cni/nomad-heart-cilium"
+      cni {
+        args = {
+          NomadNamespace = "${NOMAD_NAMESPACE}"
+          NomadTaskGroup = "${NOMAD_GROUP_NAME}"
+        }
+      }
 
       port "http" {
         static = 8080
